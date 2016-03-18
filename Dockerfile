@@ -44,7 +44,7 @@ RUN while read line; do \
 COPY run_tox.sh /bin/run_tox.sh
 
 ENV HOME /pyenv-config/
-RUN chmod o+wrX $PYENV_REQUIRED_PYTHON
+RUN chmod o+wrX /pyenv-config/
 
 VOLUME /app
 WORKDIR /app
