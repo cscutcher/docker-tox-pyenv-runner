@@ -13,8 +13,10 @@ COPY third-party/pyenv-installer $PYENV_INSTALLER_ROOT
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
+    gawk \
     git \
     libbz2-dev \
+    libffi-dev \
     libreadline-dev \
     libsqlite3-dev \
     libssl-dev \
@@ -22,7 +24,10 @@ RUN apt-get update && apt-get install -y \
     libxslt-dev \
     mercurial \
     openjdk-7-jre \
+    python-dev \
+    python-openssl \
     python-tox \
+    zlib1g-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install docker tox which allows tox to discover pyenv pythons
