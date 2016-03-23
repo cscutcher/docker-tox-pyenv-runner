@@ -38,7 +38,6 @@ RUN $PYENV_INSTALLER_ROOT/bin/pyenv-installer
 
 # Copy file listing required python versions
 COPY required_python_versions.txt $PYENV_REQUIRED_PYTHON
-RUN chmod o+r $PYENV_REQUIRED_PYTHON
 
 # Install required python versions
 RUN while read line; do \
@@ -49,7 +48,6 @@ RUN while read line; do \
 COPY run_tox.sh /bin/run_tox.sh
 
 ENV HOME /pyenv-config/
-RUN chmod -R o+wrX /pyenv-config/
 
 VOLUME /app
 WORKDIR /app

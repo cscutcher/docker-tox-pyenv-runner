@@ -8,20 +8,6 @@ virtual environments.
 Running
 =======
 
-```
-docker run --user=$(id -u) --rm -v $PWD:/app cscutcher/tox-pyenv-runner
-```
-
-Troubleshooting
-===============
-
-KeyError: 'getpwuid(): uid not found: 1000'
--------------------------------------------
-Using the `--user` flag can cause trouble as tox doesn't pass the `HOME`
-environmental variable by default.
-
-Ensure that your tox.ini contains;
-```
-[testenv]
-passenv = HOME
+```bash
+docker run -e BE_UID=$(id -u) -e BE_GID=$(id -g) --rm -v $PWD:/app cscutcher/tox-pyenv-runner
 ```
