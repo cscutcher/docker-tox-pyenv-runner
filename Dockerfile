@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 MAINTAINER cscutche@cisco.com
 ENV PYENV_ROOT /pyenv/
 ENV PATH /pyenv/shims:/pyenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
@@ -23,9 +23,10 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libxslt-dev \
     mercurial \
-    openjdk-7-jre \
+    openjdk-9-jre-headless \
     python-dev \
     python-openssl \
+    python-pip \
     python-tox \
     zlib1g-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
