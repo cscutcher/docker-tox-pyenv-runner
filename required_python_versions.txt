@@ -1,7 +1,11 @@
-2.7.11
-3.4.3
-3.5.1
-3.6-dev
-jython-2.7.1b2
-pypy-4.0.1
+2.7.13
+3.4.6
+3.5.3
+3.6.1
+3.7-dev
+jython-2.7.1b3
+pypy-5.7.0
 pypy3-2.4.0
+pypy3.5-5.7-beta
+stackless-2.7.12
+stackless-3.4.2
